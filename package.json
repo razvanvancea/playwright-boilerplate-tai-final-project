@@ -1,0 +1,31 @@
+{
+  "name": "playwright-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "format": "npx prettier --write .",
+    "test": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test",
+    "set-base-images": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test --update-snapshots",
+    "test:e2e:headed": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test --headed",
+    "test:e2e": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test",
+    "open:report": "npx playwright show-report",
+    "test:visual": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test --config=playwright.visual.config.ts",
+    "test:a11y": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test --config=playwright.a11y.config.ts",
+    "test:api": "npx playwright test --config=playwright.api.config.ts"
+  },
+  "keywords": [],
+  "author": "TAI Program",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@faker-js/faker": "^10.1.0",
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.2",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.3",
+    "playwright-schema-validator": "^1.0.0",
+    "prettier": "^3.6.2",
+    "zod": "^4.1.12"
+  }
+}

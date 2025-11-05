@@ -1,0 +1,27 @@
+import { defineConfig, devices } from '@playwright/test';
+
+export default defineConfig({
+  timeout: 15000,
+  expect: {
+    timeout: 15000,
+  },
+  testDir: './tests/visual/',
+ fullyParallel: true,
+ forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 1 : undefined,
+ reporter: 'html',
+ use: {
+    testIdAttribute: 'test-data',
+    trace: 'retain-on-failure',
+    video: 'off',
+    screenshot: 'only-on-failure', // off, on
+  },
+
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    }
+  ],
+});
