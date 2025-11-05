@@ -39,24 +39,24 @@ npm install
 ```
 
 
-## 🧪 Running tests
+# 🧪 Running tests
 
-# Run E2E tests in headless mode
+## Run E2E tests in headless mode
 npm run test
 
-# Run E2E tests in headed mode (browser UI visible)
+## Run E2E tests in headed mode (browser UI visible)
 npm run test:headed
 
-# Run visual regression tests (inside Docker)
+## Run visual regression tests (inside Docker)
 npm run test:visual
 
-# Run accessibility (a11y) tests
+## Run accessibility (a11y) tests
 npm run test:a11y
 
-# Run API tests
+## Run API tests
 npm run test:api
 
 
 ## 🧪 CI/CD
 
-# GitHub Actions, with 4 e2e jobs running in parallel
+GitHub Actions, with 4 parallel web e2e jobs
