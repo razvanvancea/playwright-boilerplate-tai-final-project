@@ -36,6 +36,8 @@ Clone the repository and install dependencies:
 ```bash
 npm install
 
+```
+
 
 ## 🧪 Running tests
 
@@ -54,3 +56,7 @@ npm run test:a11y
 # Run API tests
 npm run test:api
 
+
+## 🧪 CI/CD
+
+# GitHub Actions, with 4 e2e jobs running in parallel
