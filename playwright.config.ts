@@ -1,10 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  timeout: 15000, // cat tre sa dureze maxim executia testului
+  timeout: 15000,
   expect: {
-    timeout: 15000, // timeout de asertie
-  },
+    timeout: 15000,
   testDir: './tests/e2e/',
 
   fullyParallel: true,
