@@ -20,10 +20,7 @@ export class LoginPage {
     this.logoutBtn = page.locator('[data-test="logout-sidebar-link"]');
   }
 
-  async doLogin(
-    username: string = `${process.env.USERNAME}`,
-    password: string = `${process.env.PSW}`
-  ) {
+  async doLogin(username: string = `standard_user`, password: string = `secret_sauce`) {
     await this.usernameField.fill(username);
     await this.pswField.fill(password);
     await this.loginBtn.click();

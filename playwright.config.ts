@@ -4,13 +4,14 @@ export default defineConfig({
   timeout: 15000,
   expect: {
     timeout: 15000,
+  },
   testDir: './tests/e2e/',
 
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: [['blob'],['html'],['list']],
+  reporter: [['blob'], ['html'], ['list']],
   use: {
     testIdAttribute: 'test-data',
     trace: 'retain-on-failure',
@@ -23,5 +24,5 @@ export default defineConfig({
       name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     },
-  ]
+  ],
 });

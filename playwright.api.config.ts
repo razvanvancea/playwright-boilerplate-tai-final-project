@@ -10,7 +10,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: [['html'],['list']],
+  reporter: [['html'], ['list']],
   use: {
     testIdAttribute: 'test-data',
     trace: 'retain-on-failure',
@@ -23,5 +23,5 @@ export default defineConfig({
       name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     },
-  ]
+  ],
 });

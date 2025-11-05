@@ -35,8 +35,6 @@ test.describe('Place order and cart actions test suite', () => {
   });
 
   test('Add product to cart', async ({ page, productsPage, navbarPage }) => {
-    
-
     await productsPage.addToCartBtn.click();
     await navbarPage.cartBtn.click();
     await expect(page.locator('[data-test="secondary-header"]')).toBeVisible();

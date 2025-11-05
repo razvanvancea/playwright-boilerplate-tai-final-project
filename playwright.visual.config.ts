@@ -6,12 +6,12 @@ export default defineConfig({
     timeout: 15000,
   },
   testDir: './tests/visual/',
- fullyParallel: true,
- forbidOnly: !!process.env.CI,
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: [['html'],['list']],
- use: {
+  reporter: [['html'], ['list']],
+  use: {
     testIdAttribute: 'test-data',
     trace: 'retain-on-failure',
     video: 'off',
@@ -22,6 +22,6 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    }
+    },
   ],
 });
