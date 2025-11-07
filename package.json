@@ -16,7 +16,7 @@
   "keywords": [],
   "author": "TAI Program",
   "license": "ISC",
-  "description": "",
+  "description": "https://tai.razvanvancea.ro",
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
     "@faker-js/faker": "^10.1.0",
