@@ -5,7 +5,7 @@
   "scripts": {
     "format": "npx prettier --write .",
     "test": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test",
-    "set-base-images": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test --update-snapshots",
+    "set-base-images": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test --config=playwright.visual.config.ts --update-snapshots",
     "test:e2e:headed": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test --headed",
     "test:e2e": "npx cross-env BASE_URL=https://www.saucedemo.com/ playwright test",
     "open:report": "npx playwright show-report",
